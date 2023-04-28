@@ -14,7 +14,7 @@ swift package --allow-writing-to-directory $DOCC_OUTPUT_FOLDER \
     generate-documentation --target $TARGET_NAME \
     --disable-indexing \
     --transform-for-static-hosting \
-    --hosting-base-path $LOWERCASE_TARGET_NAME \
+    --hosting-base-path $HOST_BASE_PATH \
     --output-path $DOCC_OUTPUT_FOLDER
 
 cp images/icon.png $DOCC_OUTPUT_FOLDER/$TARGET_NAME/favicon.ico
