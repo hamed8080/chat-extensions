@@ -5,6 +5,8 @@ source $(dirname $0)/environment+variables.sh
 #Use git worktree to checkout the $DOCC_BRANCH_NAME branch of this repository in a $DOCC_BRANCH_NAME sub-directory
 git worktree add --checkout $DOCC_BRANCH_NAME
 
+rm -r $DOCC_OUTPUT_FOLDER
+
 cd $DOCC_BRANCH_NAME #move to worktree directory to create all files there
 
 # # Pretty print DocC JSON output so that it can be consistently diffed between commits
@@ -31,7 +33,7 @@ if [ -n "$(git status --porcelain)" ]; then
     echo "Documentation changes found. Committing the changes to the '$DOCC_BRANCH_NAME' branch."
     echo "Please call push manually"
     git commit -m "Update Github Pages documentation site to $CURRENT_COMMIT_HASH"
-    open -n https://$GITHUB_USER_NAME.github.io/${LOWERCASE_TARGET_NAME}/documentation/${LOWERCASE_TARGET_NAME}/
+    open -n https://$GITHUB_USER_NAME.github.io/${HOST_BASE_PATH}/documentation/${LOWERCASE_TARGET_NAME}/
 else
     # No changes found, nothing to commit.
     echo "No documentation changes found."
