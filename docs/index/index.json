@@ -1,0 +1,33 @@
+{
+  "interfaceLanguages" : {
+    "swift" : [
+      {
+        "icon" : "icon.png",
+        "path" : "\/documentation\/chatextensions",
+        "title" : "ChatExtensions",
+        "type" : "module"
+      }
+    ]
+  },
+  "references" : {
+    "icon.png" : {
+      "alt" : "App icon.",
+      "identifier" : "icon.png",
+      "type" : "image",
+      "variants" : [
+        {
+          "traits" : [
+            "1x",
+            "light"
+          ],
+          "url" : "\/images\/icon.png"
+        }
+      ]
+    }
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 1
+  }
+}

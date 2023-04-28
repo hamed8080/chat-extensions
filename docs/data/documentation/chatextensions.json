@@ -1,0 +1,105 @@
+{
+  "abstract" : [
+    {
+      "text" : "A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/ChatExtensions\/documentation\/ChatExtensions"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "ChatExtensions",
+    "images" : [
+      {
+        "identifier" : "icon.png",
+        "type" : "icon"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "ChatExtensions"
+      }
+    ],
+    "platforms" : [
+      {
+        "introducedAt" : "10.0",
+        "name" : "iOS"
+      },
+      {
+        "introducedAt" : "12",
+        "name" : "macOS"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "ChatExtensions"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/chatextensions"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://ChatExtensions/documentation/ChatExtensions": {
+  "abstract" : [
+    {
+      "text" : "A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/ChatExtensions\/documentation\/ChatExtensions",
+  "images" : [
+    {
+      "identifier" : "icon.png",
+      "type" : "icon"
+    }
+  ],
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "ChatExtensions",
+  "type" : "topic",
+  "url" : "\/documentation\/chatextensions"
+},
+"icon.png": {
+  "alt" : "App icon.",
+  "identifier" : "icon.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "\/images\/icon.png"
+    }
+  ]
+}
+}
+}
