@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "ChatExtensions"
   s.version      = "1.0.0"
   s.summary      = "ChatExtensions"
-  s.description  = "A set of extensions to ease using of repetitive useful methods and variables."
+  s.description  = "A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/chat-extensions"
   s.license      = "MIT"
   s.author       = { "Hamed Hosseini" => "hamed8080@gmail.com" }

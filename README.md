@@ -1,5 +1,6 @@
 # ChatExtensions
-A set of extensions to ease using of repetitive useful methods and variables.
+
+<h5>A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc.</h5>
 
 <img src="https://github.com/hamed8080/chat-extensions/raw/main/images/icon.png"  width="164" height="164">
 
@@ -27,9 +28,8 @@ pod "chat-extensions", :git => 'http://pubgi.fanapsoft.ir/chat/ios/chat-extensio
 ```
 <br/>
 
-## [Documentation](https://hamed8080.gitlab.io/chat-extensions/chatextensions/documentation/chatextensions/)
-For more information about how to use ChatExtensions visit [Documentation](https://hamed8080.gitlab.io/chat-extensions/chatextensions/documentation/chatextensions/) 
-<br/>
+## [Documentation](https://hamed8080.github.io/chat-extensions/documentation/chatextensions/)
+For more information about how to use ChatExtensions visit [Documentation](https://hamed8080.github.io/chat-extensions/documentation/chatextensions/) 
 <br/>
 
 ## Contributing to ChatExtensions
