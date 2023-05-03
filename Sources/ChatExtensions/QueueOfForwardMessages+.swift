@@ -1,9 +1,8 @@
 //
-//  File.swift
-//  
+// QueueOfForwardMessages+.swift
+// Copyright (c) 2022 ChatExtensions
 //
-//  Created by hamed on 4/16/23.
-//
+// Created by Hamed Hosseini on 12/14/22
 
 import ChatModels
 import ChatDTO

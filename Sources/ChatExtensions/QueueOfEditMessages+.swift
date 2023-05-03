@@ -1,9 +1,8 @@
 //
-//  File.swift
-//  
+// QueueOfEditMessages+.swift
+// Copyright (c) 2022 ChatExtensions
 //
-//  Created by hamed on 4/16/23.
-//
+// Created by Hamed Hosseini on 12/14/22
 
 import ChatModels
 import ChatDTO
@@ -11,7 +10,7 @@ import ChatDTO
 public extension QueueOfEditMessages {
    convenience init(edit: EditMessageRequest) {
        self.init(messageId: edit.messageId,
-                 messageType: edit.messageType,
+                 messageType: .init(rawValue: edit.messageType.rawValue) ?? .unknown,
                  metadata: edit.metadata,
                  repliedTo: edit.repliedTo,
                  textMessage: edit.textMessage,
@@ -27,6 +26,6 @@ public extension QueueOfEditMessages {
                            textMessage: textMessage ?? "",
                            repliedTo: repliedTo,
                            metadata: metadata,
-                           uniqueId: uniqueId)
+                           uniqueId: uniqueId ?? "")
     }
 }

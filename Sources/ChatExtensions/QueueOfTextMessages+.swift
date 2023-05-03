@@ -1,16 +1,15 @@
 //
-//  File.swift
-//  
+// QueueOfTextMessages+.swift
+// Copyright (c) 2022 ChatExtensions
 //
-//  Created by hamed on 4/16/23.
-//
+// Created by Hamed Hosseini on 12/14/22
 
 import ChatDTO
 import ChatModels
 
 public extension QueueOfTextMessages {
    convenience init(textRequest: SendTextMessageRequest) {
-       self.init(messageType: textRequest.messageType,
+       self.init(messageType: .init(rawValue: textRequest.messageType.rawValue) ?? .unknown,
                  metadata: textRequest.metadata,
                  repliedTo: textRequest.repliedTo,
                  systemMetadata: textRequest.systemMetadata,
@@ -27,6 +26,6 @@ public extension QueueOfTextMessages {
                                metadata: metadata,
                                repliedTo: repliedTo,
                                systemMetadata: systemMetadata,
-                               uniqueId: uniqueId)
+                               uniqueId: uniqueId ?? "")
     }
 }
