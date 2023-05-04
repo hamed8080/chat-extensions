@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatExtensions"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "ChatExtensions"
   s.description  = "A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc."
   s.homepage     = "https://pubgi.fanapsoft.ir/chat/ios/chat-extensions"
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://pubgi.fanapsoft.ir/chat/ios/chat-extensions", :tag => s.version }
   s.source_files = "Sources/ChatExtensions/**/*.{h,swift,xcdatamodeld,m,momd}"
   s.frameworks  = "Foundation"
-  s.dependency "ChatDTO" , '~> 1.0.1'
+  s.dependency "ChatDTO" , '~> 1.0.2'
   s.dependency "ChatCore" , '~> 1.0.1'
-  s.dependency "ChatCache" , '~> 1.0.1'
+  s.dependency "ChatCache" , '~> 1.0.2'
 end
