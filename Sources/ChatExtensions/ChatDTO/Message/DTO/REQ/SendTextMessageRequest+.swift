@@ -38,5 +38,15 @@ public extension SendTextMessageRequest {
     func queueOfFileMessages(_ request: UploadImageRequest) -> QueueOfFileMessages {
         .init(req: self, imageRequest: request)
     }
+
+    init(request: SendTextMessageRequest, uniqueId: String) {
+        self = .init(threadId: request.threadId,
+                       textMessage: request.textMessage,
+                       messageType: request.messageType,
+                       metadata: request.metadata,
+                       repliedTo: request.repliedTo,
+                       systemMetadata: request.systemMetadata,
+                       uniqueId: uniqueId)
+    }
 }
 
