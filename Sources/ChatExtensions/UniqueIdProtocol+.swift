@@ -9,7 +9,5 @@ import ChatCore
 import ChatDTO
 
 public extension ChatCore.UniqueIdProtocol where Self: ChatDTO.UniqueIdProtocol {
-    var chatUniqueId: String {
-        return uniqueId
-    }
+    var chatUniqueId: String { uniqueId ?? UUID().uuidString }
 }

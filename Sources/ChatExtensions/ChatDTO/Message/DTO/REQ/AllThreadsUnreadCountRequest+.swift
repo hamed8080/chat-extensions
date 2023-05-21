@@ -8,8 +8,8 @@ import ChatDTO
 import ChatCore
 import Foundation
 
-extension UnreadMessageCountRequest: ChatSendable {}
+extension AllThreadsUnreadCountRequest: ChatSendable {}
 
-public extension UnreadMessageCountRequest {
+public extension AllThreadsUnreadCountRequest {
     var content: String? { jsonString }
 }
