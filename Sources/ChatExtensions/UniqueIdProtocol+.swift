@@ -9,5 +9,6 @@ import ChatCore
 import ChatDTO
 
 public extension ChatCore.UniqueIdProtocol where Self: ChatDTO.UniqueIdProtocol {
-    var chatUniqueId: String { uniqueId ?? UUID().uuidString }
+    /// Never genetrate uniqueId here it will leads to response problem beacuse of different uniqueId.
+    var chatUniqueId: String { uniqueId }
 }
