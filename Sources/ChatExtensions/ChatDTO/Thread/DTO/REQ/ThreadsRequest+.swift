@@ -20,7 +20,8 @@ public extension ThreadsRequest {
     var fetchRequest: FetchThreadRequest {
         .init(count: count,
               offset: offset,
-              name: name,
+              title: name,
+              description: name,
               new: new,
               isGroup: isGroup,
               type: type?.rawValue,
