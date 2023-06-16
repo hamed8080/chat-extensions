@@ -13,3 +13,5 @@ extension GetJoinCallsRequest: ChatSendable {}
 public extension GetJoinCallsRequest {
     var content: String? { jsonString }
 }
+
+extension GetJoinCallsRequest: Paginateable{}

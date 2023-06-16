@@ -34,3 +34,5 @@ public extension ThreadsRequest {
               uniqueId: uniqueId)
     }
 }
+
+extension ThreadsRequest: Paginateable{}

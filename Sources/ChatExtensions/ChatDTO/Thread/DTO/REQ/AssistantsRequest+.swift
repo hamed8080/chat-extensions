@@ -13,3 +13,5 @@ extension AssistantsRequest: ChatSendable {}
 public extension AssistantsRequest {
     var content: String? { jsonString }
 }
+
+extension AssistantsRequest: Paginateable{}

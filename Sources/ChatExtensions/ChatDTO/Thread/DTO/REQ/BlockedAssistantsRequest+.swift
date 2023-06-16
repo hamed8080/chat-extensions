@@ -13,3 +13,5 @@ extension BlockedAssistantsRequest: ChatSendable {}
 public extension BlockedAssistantsRequest {
     var content: String? { jsonString }
 }
+
+extension BlockedAssistantsRequest: Paginateable {}

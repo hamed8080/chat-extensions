@@ -19,3 +19,5 @@ public extension ThreadParticipantsRequest {
         self.admin = admin
     }
 }
+
+extension ThreadParticipantsRequest: Paginateable {}

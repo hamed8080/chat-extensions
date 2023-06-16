@@ -31,3 +31,7 @@ public extension ContactsRequest {
               uniqueId: uniqueId)
     }
 }
+
+extension ContactsRequest: Paginateable {
+    public var count: Int { size }
+}
