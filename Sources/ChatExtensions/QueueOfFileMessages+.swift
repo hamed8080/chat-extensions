@@ -41,24 +41,4 @@ public extension QueueOfFileMessages {
                   yC: imageRequest.yC,
                   imageToSend: imageRequest.data)
     }
-
-    var request: (UploadFileRequest, SendTextMessageRequest) {
-        let text = SendTextMessageRequest(threadId: threadId ?? -1,
-                                          textMessage: textMessage ?? "",
-                                          messageType: messageType ?? .unknown,
-                                          metadata: metadata,
-                                          repliedTo: repliedTo,
-                                          systemMetadata: nil,
-                                          uniqueId: uniqueId ?? "")
-        let file = UploadFileRequest(data: fileToSend ?? Data(),
-                                     fileExtension: fileExtension,
-                                     fileName: fileName,
-                                     description: "",
-                                     isPublic: isPublic,
-                                     mimeType: mimeType,
-                                     originalName: originalName,
-                                     userGroupHash: userGroupHash,
-                                     uniqueId: uniqueId ?? "")
-        return (file, text)
-    }
 }

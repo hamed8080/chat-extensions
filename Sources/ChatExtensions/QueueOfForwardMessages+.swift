@@ -15,11 +15,4 @@ public extension QueueOfForwardMessages {
                   typeCode: forward.typeCode,
                   uniqueIds: forward.uniqueIds)
     }
-
-    var request: ForwardMessageRequest {
-        ForwardMessageRequest(fromThreadId: fromThreadId ?? -1,
-                              threadId: threadId ?? -1,
-                              messageIds: messageIds ?? [],
-                              uniqueIds: uniqueIds ?? [])
-    }
 }

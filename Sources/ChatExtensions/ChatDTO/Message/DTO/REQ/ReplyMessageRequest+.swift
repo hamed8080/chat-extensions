@@ -17,15 +17,3 @@ public extension ReplyMessageRequest {
     var subjectId: Int { threadId }
     var _messageType: ChatCore.MessageType { ChatCore.MessageType(rawValue: self.messageType.rawValue) ?? .unknown }
 }
-
-public extension ReplyMessageRequest {
-    var sendTextMessageRequest: SendTextMessageRequest {
-        .init(threadId: threadId,
-              textMessage: textMessage,
-              messageType: ChatModels.MessageType(rawValue: messageType.rawValue) ?? .text,
-              metadata: metadata,
-              repliedTo: repliedTo,
-              systemMetadata: systemMetadata,
-              uniqueId: uniqueId)
-    }
-}

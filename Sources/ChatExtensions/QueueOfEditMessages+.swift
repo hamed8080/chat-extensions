@@ -18,14 +18,4 @@ public extension QueueOfEditMessages {
                  typeCode: edit.typeCode,
                  uniqueId: edit.uniqueId)
     }
-
-    var request: EditMessageRequest {
-        EditMessageRequest(threadId: threadId ?? -1,
-                           messageType: messageType ?? .unknown,
-                           messageId: messageId ?? -1,
-                           textMessage: textMessage ?? "",
-                           repliedTo: repliedTo,
-                           metadata: metadata,
-                           uniqueId: uniqueId ?? "")
-    }
 }

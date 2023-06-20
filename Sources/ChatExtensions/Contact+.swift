@@ -14,8 +14,7 @@ public extension Contact {
             email: email,
             firstName: firstName,
             lastName: lastName,
-            username: user?.username,
-            uniqueId: UUID().uuidString
+            username: user?.username
         )
         req.cellphoneNumber = cellphoneNumber
         return req

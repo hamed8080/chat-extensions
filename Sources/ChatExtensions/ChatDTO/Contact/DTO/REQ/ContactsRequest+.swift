@@ -27,8 +27,7 @@ public extension ContactsRequest {
               offset: offset,
               order: Ordering(rawValue: order ?? ChatCache.Ordering.asc.rawValue) ?? ChatCache.Ordering.asc,
               query: query,
-              summery: summery,
-              uniqueId: uniqueId)
+              summery: summery)
     }
 }
 

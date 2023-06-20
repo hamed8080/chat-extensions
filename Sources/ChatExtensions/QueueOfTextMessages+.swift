@@ -18,14 +18,4 @@ public extension QueueOfTextMessages {
                  typeCode: textRequest.typeCode,
                  uniqueId: textRequest.uniqueId)
     }
-
-    var request: SendTextMessageRequest {
-        SendTextMessageRequest(threadId: threadId ?? -1,
-                               textMessage: textMessage ?? "",
-                               messageType: messageType ?? .unknown,
-                               metadata: metadata,
-                               repliedTo: repliedTo,
-                               systemMetadata: systemMetadata,
-                               uniqueId: uniqueId ?? "")
-    }
 }
