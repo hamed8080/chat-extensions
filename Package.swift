@@ -17,6 +17,7 @@ let package = Package(
             targets: ["ChatExtensions"]),
     ],
     dependencies: [
+        .package(path: "../ChatTransceiver"),
         .package(path: "../ChatDTO"),
         .package(path: "../ChatCore"),
         .package(path: "../ChatCache"),
@@ -26,6 +27,7 @@ let package = Package(
         .target(
             name: "ChatExtensions",
             dependencies: [
+                "ChatTransceiver",
                 "ChatDTO",
                 "ChatCore",
                 "ChatCache",
