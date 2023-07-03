@@ -19,6 +19,7 @@ let package = Package(
     dependencies: [
         .package(path: "../ChatTransceiver"),
         .package(path: "../ChatCache"),
+        .package(path: "../ChatCore"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
@@ -27,12 +28,14 @@ let package = Package(
             dependencies: [
                 "ChatTransceiver",
                 "ChatCache",
+                "ChatCore",
             ]
         ),
         .testTarget(
             name: "ChatExtensionsTests",
             dependencies: [
                 "ChatCache",
+                "ChatCore",
             ],
             resources: []
         ),

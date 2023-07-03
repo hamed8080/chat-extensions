@@ -11,6 +11,6 @@ import Foundation
 extension RemoveParticipantsRequest: ChatSendable, SubjectProtocol {}
 
 public extension RemoveParticipantsRequest {
-    var content: String? { participantIds.jsonString }
+    var content: String? { participantIds?.jsonString ?? invitees?.jsonString }
     var subjectId: Int { threadId }
 }
