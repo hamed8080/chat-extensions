@@ -32,3 +32,5 @@ public extension GetHistoryRequest {
               toTimeNanos: toTimeNanos)
     }
 }
+
+extension GetHistoryRequest: Paginateable{}
