@@ -14,6 +14,6 @@ extension ReplyPrivatelyRequest: Queueable, PlainTextSendable, ReplyProtocol, Me
 
 public extension ReplyPrivatelyRequest {
     var content: String? { replyContent.jsonString }
-    var subjectId: Int { threadId }
+    var subjectId: Int { replyContent.fromConversationId }
     var _messageType: ChatCore.MessageType { ChatCore.MessageType(rawValue: self.messageType.rawValue) ?? .unknown }
 }
