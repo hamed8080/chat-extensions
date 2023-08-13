@@ -12,5 +12,5 @@ extension RactionListRequest: ChatSendable, SubjectProtocol {}
 
 public extension RactionListRequest {
     var subjectId: Int { conversationId }
-    var content: String? { messageIds.jsonString }
+    var content: String? { jsonString }
 }
