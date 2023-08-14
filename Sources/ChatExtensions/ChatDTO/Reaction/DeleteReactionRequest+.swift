@@ -8,8 +8,9 @@ import ChatDTO
 import ChatCore
 import Foundation
 
-extension DeleteReactionRequest: ChatSendable {}
+extension DeleteReactionRequest: ChatSendable, SubjectProtocol {}
 
 public extension DeleteReactionRequest {
-    var content: String? { "\(reactionId)" }
+    var subjectId: Int { conversationId }
+    var content: String? { jsonString }
 }
