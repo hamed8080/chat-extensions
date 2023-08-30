@@ -8,7 +8,7 @@ import ChatDTO
 import ChatCore
 import Foundation
 
-extension MessageSeenRequest: PlainTextSendable, ChatCore.UniqueIdProtocol {}
+extension MessageSeenRequest: PlainTextSendable {}
 
 public extension MessageSeenRequest {
     var content: String? { "\(messageId)" }

@@ -9,7 +9,7 @@ import ChatModels
 
 public extension QueueOfTextMessages {
    convenience init(textRequest: SendTextMessageRequest) {
-       self.init(messageType: .init(rawValue: textRequest.messageType.rawValue) ?? .unknown,
+       self.init(messageType: textRequest.messageType,
                  metadata: textRequest.metadata,
                  repliedTo: textRequest.repliedTo,
                  systemMetadata: textRequest.systemMetadata,

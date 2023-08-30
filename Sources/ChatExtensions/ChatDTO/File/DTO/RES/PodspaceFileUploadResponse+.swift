@@ -10,12 +10,13 @@ import ChatDTO
 import ChatModels
 import ChatCore
 
-extension PodspaceFileUploadResponse {
-    public func toMetaData(_ config: ChatConfig, width: Int?, height: Int?) -> FileMetaData {
-        let ext = result?.extension ?? ""
+public extension PodspaceFileUploadResponse {
+     func toMetaData(_ config: ChatConfig, width: Int? = nil, height: Int? = nil) -> FileMetaData? {
+        guard let hash = result?.hash else { return nil }
+        let ext = result?.extension
         let isImage = ["png", "jpg", "jpeg"].map{$0.lowercased()}.contains(ext)
         let path = isImage ? Routes.images.rawValue : Routes.files.rawValue
-        let link = "\(config.fileServer)\(path)/\(result?.hash ?? "")"
+        let link = "\(config.fileServer)\(path)/\(hash)"
         let fileDetail = FileDetail(fileExtension: result?.extension,
                    link: link,
                    mimeType: result?.type,

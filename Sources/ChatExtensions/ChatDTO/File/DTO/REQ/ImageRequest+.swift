@@ -8,8 +8,6 @@ import Foundation
 import ChatDTO
 import ChatCore
 
-extension ImageRequest: ChatCore.UniqueIdProtocol {}
-
 public extension ImageRequest {
 
     init(request: ImageRequest, forceToDownloadFromServer: Bool) {

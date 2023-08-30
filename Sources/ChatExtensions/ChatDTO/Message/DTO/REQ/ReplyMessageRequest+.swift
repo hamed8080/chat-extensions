@@ -15,5 +15,5 @@ extension ReplyMessageRequest: Queueable, PlainTextSendable, ReplyProtocol, Mess
 public extension ReplyMessageRequest {
     var content: String? { textMessage }
     var subjectId: Int { threadId }
-    var _messageType: ChatCore.MessageType { ChatCore.MessageType(rawValue: self.messageType.rawValue) ?? .unknown }
+    var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: self.messageType.rawValue) }
 }

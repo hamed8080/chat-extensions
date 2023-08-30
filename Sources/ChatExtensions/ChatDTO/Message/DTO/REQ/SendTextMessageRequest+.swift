@@ -9,19 +9,18 @@ import ChatCore
 import Foundation
 import ChatModels
 
-extension SendTextMessageRequest: ChatCore.UniqueIdProtocol, Queueable, PlainTextSendable, ReplyProtocol, MessageTypeProtocol, MetadataProtocol, SystemtMetadataProtocol, SubjectProtocol {
-}
+extension SendTextMessageRequest: Queueable, PlainTextSendable, ReplyProtocol, MessageTypeProtocol, MetadataProtocol, SystemtMetadataProtocol, SubjectProtocol {}
 
 public extension SendTextMessageRequest {
     var content: String? { textMessage }
     var subjectId: Int { threadId }
-    var _messageType: ChatCore.MessageType { ChatCore.MessageType(rawValue: self.messageType.rawValue) ?? .unknown }
+    var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: self.messageType.rawValue) }
 }
 
 
 public extension SendTextMessageRequest {
     var queueOfTextMessages: QueueOfTextMessages {
-        .init(messageType: MessageType(rawValue: messageType.rawValue) ?? MessageType.text,
+        .init(messageType: messageType,
               metadata: metadata,
               repliedTo: repliedTo,
               systemMetadata: systemMetadata,

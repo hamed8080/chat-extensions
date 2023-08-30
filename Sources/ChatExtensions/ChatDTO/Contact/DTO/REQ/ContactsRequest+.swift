@@ -16,7 +16,6 @@ public extension ContactsRequest {
     var content: String? { jsonString }
 }
 
-
 public extension ContactsRequest {
     var fetchRequest: FetchContactsRequest {
         .init(id: id,
@@ -25,9 +24,14 @@ public extension ContactsRequest {
               email: email,
               coreUserId: coreUserId,
               offset: offset,
-              order: Ordering(rawValue: order ?? ChatCache.Ordering.asc.rawValue) ?? ChatCache.Ordering.asc,
+              order: fetchOrdering,
               query: query,
               summery: summery)
+    }
+
+    fileprivate var fetchOrdering: Ordering {
+        guard let order = order, let order = Ordering(rawValue: order) else { return .asc }
+        return order
     }
 }
 

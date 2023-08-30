@@ -8,7 +8,6 @@ import Foundation
 import ChatDTO
 import ChatCore
 
-extension FileRequest: ChatCore.UniqueIdProtocol {}
 public extension FileRequest {
 
     init(request: FileRequest, forceToDownloadFromServer: Bool) {

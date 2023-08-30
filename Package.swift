@@ -34,6 +34,8 @@ let package = Package(
         .testTarget(
             name: "ChatExtensionsTests",
             dependencies: [
+                "ChatExtensions",
+                "ChatTransceiver",
                 "ChatCache",
                 "ChatCore",
             ],

@@ -9,11 +9,6 @@ import ChatCore
 import ChatDTO
 import ChatModels
 
-extension UploadImageRequest: ChatCore.UniqueIdProtocol {}
-
-public extension UploadImageRequest {
-}
-
 public extension UploadImageRequest {
     var queueOfFileMessages: QueueOfFileMessages {
         .init(req: nil, imageRequest: self)

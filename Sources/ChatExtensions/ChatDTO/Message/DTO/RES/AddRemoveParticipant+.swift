@@ -9,7 +9,5 @@ import ChatCore
 import ChatDTO
 
 public extension AddRemoveParticipant {
-    var requestTypeEnum: ChatMessageVOTypes? {
-        ChatMessageVOTypes(rawValue: requestType ?? -1)
-    }
+    var requestTypeEnum: ChatMessageVOTypes? { ChatMessageVOTypes(rawValue: requestType ?? ChatMessageVOTypes.unknown.rawValue) }
 }

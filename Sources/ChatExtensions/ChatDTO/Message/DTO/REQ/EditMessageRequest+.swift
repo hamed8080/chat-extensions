@@ -15,12 +15,12 @@ extension EditMessageRequest: Queueable, PlainTextSendable, ReplyProtocol, Metad
 public extension EditMessageRequest {
     var content: String? { textMessage }
     var subjectId: Int { messageId }
-    var _messageType: ChatCore.MessageType { ChatCore.MessageType(rawValue: messageType.rawValue) ?? .unknown }
+    var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: messageType.rawValue) }
 }
 
 public extension EditMessageRequest {
     var queueOfTextMessages: QueueOfEditMessages {
-        .init(messageType: MessageType(rawValue: messageType.rawValue) ?? MessageType.text,
+        .init(messageType: messageType,
               metadata: metadata,
               repliedTo: repliedTo,
               textMessage: textMessage,

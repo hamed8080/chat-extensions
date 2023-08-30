@@ -11,7 +11,7 @@ import Foundation
 public extension QueueOfFileMessages {
 
    convenience init(req: SendTextMessageRequest?, uploadFile: UploadFileRequest) {
-       self.init(messageType: .init(rawValue: req?.messageType.rawValue ?? MessageType.unknown.rawValue) ?? .unknown,
+       self.init(messageType: (req?.messageType ?? .unknown),
                  metadata:  req?.metadata,
                  mimeType: uploadFile.mimeType,
                  originalName: uploadFile.originalName,
@@ -21,11 +21,11 @@ public extension QueueOfFileMessages {
                  typeCode: req?.typeCode,
                  uniqueId: req?.uniqueId,
                  userGroupHash: uploadFile.userGroupHash,
-                 fileToSend: uploadFile.data)
+                 fileToSend: uploadFile.dataToSend)
     }
 
     convenience init(req: SendTextMessageRequest?, imageRequest: UploadImageRequest) {
-        self.init(messageType: .init(rawValue: req?.messageType.rawValue ?? MessageType.unknown.rawValue) ?? .unknown,
+        self.init(messageType: (req?.messageType ?? .unknown),
                   metadata: req?.metadata,
                   mimeType: imageRequest.mimeType,
                   originalName: imageRequest.originalName,
@@ -39,6 +39,6 @@ public extension QueueOfFileMessages {
                   wC: imageRequest.wC,
                   xC: imageRequest.xC,
                   yC: imageRequest.yC,
-                  imageToSend: imageRequest.data)
+                  imageToSend: imageRequest.dataToSend)
     }
 }

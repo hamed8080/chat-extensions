@@ -8,8 +8,6 @@ import ChatCore
 import ChatDTO
 import Foundation
 
-extension UploadFileRequest: ChatCore.UniqueIdProtocol {}
-
 public extension UploadFileRequest {
 
     init(request: UploadFileRequest, userGroupHash: String?) {

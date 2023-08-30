@@ -10,7 +10,7 @@ import ChatDTO
 public extension QueueOfEditMessages {
    convenience init(edit: EditMessageRequest) {
        self.init(messageId: edit.messageId,
-                 messageType: .init(rawValue: edit.messageType.rawValue) ?? .unknown,
+                 messageType: edit.messageType,
                  metadata: edit.metadata,
                  repliedTo: edit.repliedTo,
                  textMessage: edit.textMessage,
