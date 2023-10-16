@@ -33,6 +33,23 @@ public extension ThreadsRequest {
               metadataCriteria: metadataCriteria,
               uniqueId: uniqueId)
     }
+
+    init(searchText: String) {
+        let text = searchText.lowercased()
+        var name: String? = nil
+        var cellPhoneNumber: String? = nil
+        var userName: String? = nil
+        if text.contains("tel:") {
+            let startIndex = text.index(text.startIndex, offsetBy: 4)
+            cellPhoneNumber = String(text[startIndex..<text.endIndex])
+        } else if text.contains("uname:") {
+            let startIndex = text.index(text.startIndex, offsetBy: 6)
+            userName = String(text[startIndex..<text.endIndex])
+        } else {
+            name = text
+        }
+        self = ThreadsRequest(name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
+    }
 }
 
 extension ThreadsRequest: Paginateable{}
