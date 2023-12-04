@@ -34,21 +34,21 @@ public extension ThreadsRequest {
               uniqueId: uniqueId)
     }
 
-    init(searchText: String) {
+    init(searchText: String, count: Int = 25, offset: Int = 0) {
         let text = searchText.lowercased()
         var name: String? = nil
         var cellPhoneNumber: String? = nil
         var userName: String? = nil
-        if text.contains("tel:") {
+        if text.lowercased().contains("tel:") {
             let startIndex = text.index(text.startIndex, offsetBy: 4)
             cellPhoneNumber = String(text[startIndex..<text.endIndex])
-        } else if text.contains("uname:") {
+        } else if text.lowercased().contains("uname:") {
             let startIndex = text.index(text.startIndex, offsetBy: 6)
             userName = String(text[startIndex..<text.endIndex])
         } else {
             name = text
         }
-        self = ThreadsRequest(name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
+        self = ThreadsRequest(count: count, offset: offset, name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
     }
 }
 
