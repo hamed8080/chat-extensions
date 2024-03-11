@@ -50,6 +50,19 @@ public extension ThreadsRequest {
         }
         self = ThreadsRequest(count: count, offset: offset, name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
     }
+
+    var isCacheRequest: Bool {
+        let nonCache = new == true 
+        || name?.isEmpty == false
+        || threadIds?.isEmpty == false
+        || archived == true
+        || creatorCoreUserId != nil
+        || partnerCoreUserId != nil
+        || partnerCoreContactId != nil
+        || metadataCriteria != nil
+        || isGroup != nil
+        return !nonCache
+    }
 }
 
 extension ThreadsRequest: Paginateable{}
