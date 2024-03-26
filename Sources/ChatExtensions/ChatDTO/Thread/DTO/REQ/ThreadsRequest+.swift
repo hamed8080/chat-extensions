@@ -51,7 +51,7 @@ public extension ThreadsRequest {
         self = ThreadsRequest(count: count, offset: offset, name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
     }
 
-    var isCacheRequest: Bool {
+    var isCacheableInMemoryRequest: Bool {
         let nonCache = new == true 
         || name?.isEmpty == false
         || threadIds?.isEmpty == false
