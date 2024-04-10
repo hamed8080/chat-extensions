@@ -1,9 +1,8 @@
 //
-//  File.swift
-//  
+// ThreadsRequest+Copy.swift
+// Copyright (c) 2022 ChatExtensions
 //
-//  Created by hamed on 3/11/24.
-//
+// Created by Hamed Hosseini on 12/14/22
 
 import Foundation
 import ChatDTO
