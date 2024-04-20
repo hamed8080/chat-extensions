@@ -61,6 +61,8 @@ public extension ThreadsRequest {
         || partnerCoreContactId != nil
         || metadataCriteria != nil
         || isGroup != nil
+        || userName != nil
+        || cellPhoneNumber != nil
         return !nonCache
     }
 }
