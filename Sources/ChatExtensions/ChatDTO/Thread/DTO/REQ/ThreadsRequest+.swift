@@ -34,7 +34,7 @@ public extension ThreadsRequest {
               uniqueId: uniqueId)
     }
 
-    init(searchText: String, count: Int = 25, offset: Int = 0) {
+    init(searchText: String, count: Int = 25, offset: Int = 0, new: Bool? = nil) {
         let text = searchText.lowercased()
         var name: String? = nil
         var cellPhoneNumber: String? = nil
@@ -48,7 +48,8 @@ public extension ThreadsRequest {
         } else {
             name = text
         }
-        self = ThreadsRequest(count: count, offset: offset, name: name, cellPhoneNumber: cellPhoneNumber, userName: userName)
+        name = searchText.isEmpty ? nil : name
+        self = ThreadsRequest(count: count, offset: offset, name: name, new: new, cellPhoneNumber: cellPhoneNumber, userName: userName)
     }
 
     var isCacheableInMemoryRequest: Bool {
