@@ -17,27 +17,27 @@ let package = Package(
             targets: ["ChatExtensions"]),
     ],
     dependencies: [
-        .package(path: "../ChatTransceiver"),
-        .package(path: "../ChatCache"),
-        .package(path: "../ChatCore"),
+        .package(url: "https://pubgi.fanapsoft.ir/chat/ios/chat-transceiver", from: "2.0.0"),
+        .package(url: "https://pubgi.fanapsoft.ir/chat/ios/chat-cache", from: "2.0.0"),
+        .package(url: "https://pubgi.fanapsoft.ir/chat/ios/chat-core", from: "2.0.0"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "ChatExtensions",
             dependencies: [
-                "ChatTransceiver",
-                "ChatCache",
-                "ChatCore",
+                .product(name: "ChatTransceiver", package: "chat-transceiver"),
+                .product(name: "ChatCache", package: "chat-cache"),
+                .product(name: "ChatCore", package: "chat-core"),
             ]
         ),
         .testTarget(
             name: "ChatExtensionsTests",
             dependencies: [
                 "ChatExtensions",
-                "ChatTransceiver",
-                "ChatCache",
-                "ChatCore",
+                .product(name: "ChatTransceiver", package: "chat-transceiver"),
+                .product(name: "ChatCache", package: "chat-cache"),
+                .product(name: "ChatCore", package: "chat-core"),
             ],
             resources: []
         ),
