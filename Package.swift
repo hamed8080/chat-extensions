@@ -17,27 +17,27 @@ let package = Package(
             targets: ["ChatExtensions"]),
     ],
     dependencies: [
-        .package(path: "../ChatTransceiver"),
-        .package(path: "../ChatCache"),
-        .package(path: "../ChatCore"),
+        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.0.1"),
+        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-cache", from: "2.0.1"),
+        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-core", from: "2.0.1"),
         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
     ],
     targets: [
         .target(
             name: "ChatExtensions",
             dependencies: [
-                .product(name: "ChatTransceiver", package: "ChatTransceiver"),
-                .product(name: "ChatCache", package: "ChatCache"),
-                .product(name: "ChatCore", package: "ChatCore"),
+                .product(name: "ChatTransceiver", package: "chat-transceiver"),
+                .product(name: "ChatCache", package: "chat-cache"),
+                .product(name: "ChatCore", package: "chat-core"),
             ]
         ),
         .testTarget(
             name: "ChatExtensionsTests",
             dependencies: [
                 "ChatExtensions",
-                .product(name: "ChatTransceiver", package: "ChatTransceiver"),
-                .product(name: "ChatCache", package: "ChatCache"),
-                .product(name: "ChatCore", package: "ChatCore"),
+                .product(name: "ChatTransceiver", package: "chat-transceiver"),
+                .product(name: "ChatCache", package: "chat-cache"),
+                .product(name: "ChatCore", package: "chat-core"),
             ],
             resources: []
         ),
