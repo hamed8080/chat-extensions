@@ -8,7 +8,7 @@ import ChatDTO
 import ChatModels
 
 public extension QueueOfTextMessages {
-   convenience init(textRequest: SendTextMessageRequest) {
+    init(textRequest: SendTextMessageRequest) {
        self.init(messageType: textRequest.messageType,
                  metadata: textRequest.metadata,
                  repliedTo: textRequest.repliedTo,

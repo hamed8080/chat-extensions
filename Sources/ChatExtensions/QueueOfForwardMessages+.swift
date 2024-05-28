@@ -8,7 +8,7 @@ import ChatModels
 import ChatDTO
 
 public extension QueueOfForwardMessages {
-    convenience init(forward: ForwardMessageRequest) {
+    init(forward: ForwardMessageRequest) {
         self.init(fromThreadId: forward.fromThreadId,
                   messageIds: forward.messageIds,
                   threadId: forward.threadId,

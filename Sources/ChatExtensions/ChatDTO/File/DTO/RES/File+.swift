@@ -9,7 +9,7 @@ import ChatModels
 
 public extension File {
 
-    convenience init(hashCode: String, headers: [String: Any]){
+    init(hashCode: String, headers: [String: Any]){
         var name: String?
         if let fileName = (headers["Content-Disposition"] as? String)?.replacingOccurrences(of: "\"", with: "").split(separator: "=").last {
             name = String(fileName)

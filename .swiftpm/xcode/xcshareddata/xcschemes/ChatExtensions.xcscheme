@@ -4,22 +4,9 @@
    version = "1.7">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
       <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ChatExtensions"
-               BuildableName = "ChatExtensions"
-               BlueprintName = "ChatExtensions"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -31,6 +18,20 @@
                BlueprintIdentifier = "ChatExtensionsTests"
                BuildableName = "ChatExtensionsTests"
                BlueprintName = "ChatExtensionsTests"
+               ReferencedContainer = "container:">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "ChatExtensions"
+               BuildableName = "ChatExtensions"
+               BlueprintName = "ChatExtensions"
                ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
@@ -80,9 +81,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ChatExtensions"
-            BuildableName = "ChatExtensions"
-            BlueprintName = "ChatExtensions"
+            BlueprintIdentifier = "ChatExtensionsTests"
+            BuildableName = "ChatExtensionsTests"
+            BlueprintName = "ChatExtensionsTests"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>

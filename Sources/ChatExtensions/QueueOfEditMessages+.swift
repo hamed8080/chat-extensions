@@ -8,7 +8,7 @@ import ChatModels
 import ChatDTO
 
 public extension QueueOfEditMessages {
-   convenience init(edit: EditMessageRequest) {
+    init(edit: EditMessageRequest) {
        self.init(messageId: edit.messageId,
                  messageType: edit.messageType,
                  metadata: edit.metadata,
