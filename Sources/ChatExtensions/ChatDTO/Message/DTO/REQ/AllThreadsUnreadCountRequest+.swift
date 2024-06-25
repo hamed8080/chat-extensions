@@ -12,4 +12,5 @@ extension AllThreadsUnreadCountRequest: ChatSendable {}
 
 public extension AllThreadsUnreadCountRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

@@ -12,4 +12,5 @@ extension SendStatusPingRequest: ChatSendable {}
 
 public extension SendStatusPingRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

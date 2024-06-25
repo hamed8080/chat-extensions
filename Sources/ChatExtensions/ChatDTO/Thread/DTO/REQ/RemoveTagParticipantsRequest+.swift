@@ -13,4 +13,5 @@ extension RemoveTagParticipantsRequest: ChatSendable, SubjectProtocol {}
 public extension RemoveTagParticipantsRequest {
     var subjectId: Int { tagId }
     var content: String? { tagParticipants.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

@@ -13,6 +13,7 @@ extension ThreadParticipantRequest: ChatSendable, SubjectProtocol {}
 public extension ThreadParticipantRequest {
     var content: String? { jsonString }
     var subjectId: Int { threadId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 
     init(request: ThreadParticipantRequest, admin: Bool) {
         self = request

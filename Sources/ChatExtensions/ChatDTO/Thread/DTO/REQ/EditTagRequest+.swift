@@ -13,4 +13,5 @@ extension EditTagRequest: ChatSendable, SubjectProtocol {}
 public extension EditTagRequest {
     var subjectId: Int { id }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

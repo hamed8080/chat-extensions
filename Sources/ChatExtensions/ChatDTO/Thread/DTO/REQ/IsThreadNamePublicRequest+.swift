@@ -12,4 +12,5 @@ extension IsThreadNamePublicRequest: ChatSendable {}
 
 public extension IsThreadNamePublicRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

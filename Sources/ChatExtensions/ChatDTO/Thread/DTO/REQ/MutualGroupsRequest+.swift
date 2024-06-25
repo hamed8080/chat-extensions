@@ -12,5 +12,6 @@ extension MutualGroupsRequest: ChatSendable {}
 
 public extension MutualGroupsRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 extension MutualGroupsRequest: Paginateable{}

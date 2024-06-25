@@ -13,4 +13,5 @@ extension LeaveThreadRequest: ChatSendable, SubjectProtocol {}
 public extension LeaveThreadRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

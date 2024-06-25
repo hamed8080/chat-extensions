@@ -12,4 +12,5 @@ extension CreateTagRequest: ChatSendable {}
 
 public extension CreateTagRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

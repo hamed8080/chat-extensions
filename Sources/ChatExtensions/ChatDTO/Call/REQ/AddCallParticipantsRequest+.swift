@@ -13,4 +13,5 @@ extension AddCallParticipantsRequest: ChatSendable, SubjectProtocol {}
 public extension AddCallParticipantsRequest {
     var subjectId: Int { callId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

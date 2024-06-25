@@ -12,6 +12,7 @@ extension BlockedAssistantsRequest: ChatSendable {}
 
 public extension BlockedAssistantsRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 extension BlockedAssistantsRequest: Paginateable {}

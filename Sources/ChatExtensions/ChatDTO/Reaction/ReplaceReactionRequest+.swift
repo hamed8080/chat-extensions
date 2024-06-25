@@ -13,4 +13,5 @@ extension ReplaceReactionRequest: ChatSendable, SubjectProtocol {}
 public extension ReplaceReactionRequest {
     var subjectId: Int { conversationId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

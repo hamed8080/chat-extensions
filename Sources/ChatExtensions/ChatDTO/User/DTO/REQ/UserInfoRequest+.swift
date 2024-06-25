@@ -12,4 +12,5 @@ extension UserInfoRequest: ChatSendable {}
 
 public extension UserInfoRequest {
     var content: String? { nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

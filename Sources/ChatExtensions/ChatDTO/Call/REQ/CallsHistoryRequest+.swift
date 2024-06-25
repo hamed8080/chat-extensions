@@ -12,6 +12,7 @@ extension CallsHistoryRequest: ChatSendable {}
 
 public extension CallsHistoryRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 extension CallsHistoryRequest: Paginateable{}

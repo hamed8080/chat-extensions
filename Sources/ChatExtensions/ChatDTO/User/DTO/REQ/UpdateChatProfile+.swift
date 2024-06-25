@@ -12,4 +12,5 @@ extension UpdateChatProfile: ChatSendable {}
 
 public extension UpdateChatProfile {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

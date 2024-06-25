@@ -13,4 +13,5 @@ extension CallStickerRequest: ChatSendable, SubjectProtocol {}
 public extension CallStickerRequest {
     var subjectId: Int { callId }
     var content: String? { stickers.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

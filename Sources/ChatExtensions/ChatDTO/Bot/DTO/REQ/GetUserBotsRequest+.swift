@@ -12,4 +12,5 @@ extension GetUserBotsRequest: ChatSendable {}
 
 public extension GetUserBotsRequest {
     var content: String? { return nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

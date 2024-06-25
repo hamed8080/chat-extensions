@@ -12,4 +12,5 @@ extension CreateThreadWithMessage: ChatSendable {}
 
 public extension CreateThreadWithMessage {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

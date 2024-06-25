@@ -12,4 +12,5 @@ extension RemoveBotCommandRequest: ChatSendable {}
 
 public extension RemoveBotCommandRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

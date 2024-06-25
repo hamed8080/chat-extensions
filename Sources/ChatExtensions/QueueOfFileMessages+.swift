@@ -18,7 +18,6 @@ public extension QueueOfFileMessages {
                  repliedTo: req?.repliedTo,
                  textMessage: req?.textMessage,
                  threadId: req?.threadId,
-                 typeCode: req?.typeCode,
                  uniqueId: req?.uniqueId,
                  userGroupHash: uploadFile.userGroupHash,
                  fileToSend: uploadFile.dataToSend)
@@ -32,7 +31,6 @@ public extension QueueOfFileMessages {
                   repliedTo: req?.repliedTo,
                   textMessage: req?.textMessage,
                   threadId: req?.threadId,
-                  typeCode: req?.typeCode,
                   uniqueId: req?.uniqueId,
                   userGroupHash: imageRequest.userGroupHash,
                   hC: imageRequest.hC,

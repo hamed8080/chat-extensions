@@ -12,4 +12,5 @@ extension CreateBotRequest: PlainTextSendable {}
 
 public extension CreateBotRequest {
     var content: String? { botName }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

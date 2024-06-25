@@ -13,4 +13,5 @@ extension DeleteMessageRequest: ChatSendable, SubjectProtocol {}
 public extension DeleteMessageRequest {
     var content: String? { jsonString }
     var subjectId: Int { messageId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

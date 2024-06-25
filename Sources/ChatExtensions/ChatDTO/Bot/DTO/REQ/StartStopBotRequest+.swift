@@ -13,4 +13,5 @@ extension StartStopBotRequest: ChatSendable, SubjectProtocol {}
 public extension StartStopBotRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

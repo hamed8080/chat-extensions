@@ -13,4 +13,5 @@ extension CallClientErrorRequest: ChatSendable, SubjectProtocol {}
 public extension CallClientErrorRequest {
     var subjectId: Int { callId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

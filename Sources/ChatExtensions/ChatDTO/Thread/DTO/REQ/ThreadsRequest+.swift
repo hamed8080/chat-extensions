@@ -13,6 +13,7 @@ extension ThreadsRequest: ChatSendable {}
 
 public extension ThreadsRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: ChatCore.TypeCodeIndexProtocol.Index { typeCodeIndex }
 }
 
 

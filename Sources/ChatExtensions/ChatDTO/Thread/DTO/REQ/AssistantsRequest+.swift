@@ -12,6 +12,7 @@ extension AssistantsRequest: ChatSendable {}
 
 public extension AssistantsRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 extension AssistantsRequest: Paginateable{}

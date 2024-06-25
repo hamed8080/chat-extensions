@@ -13,4 +13,5 @@ extension AcceptCallRequest: ChatSendable, SubjectProtocol {}
 public extension AcceptCallRequest {
     var subjectId: Int { callId }
     var content: String? { client.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

@@ -15,7 +15,6 @@ public extension QueueOfTextMessages {
                  systemMetadata: textRequest.systemMetadata,
                  textMessage: textRequest.textMessage,
                  threadId: textRequest.threadId,
-                 typeCode: textRequest.typeCode,
                  uniqueId: textRequest.uniqueId)
     }
 }

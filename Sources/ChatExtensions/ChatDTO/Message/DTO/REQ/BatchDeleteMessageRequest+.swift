@@ -12,4 +12,5 @@ extension BatchDeleteMessageRequest: ChatSendable {}
 
 public extension BatchDeleteMessageRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

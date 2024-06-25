@@ -12,4 +12,5 @@ extension BlockRequest: ChatSendable {}
 
 public extension BlockRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

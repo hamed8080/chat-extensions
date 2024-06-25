@@ -12,4 +12,5 @@ extension StartCallRequest: ChatSendable {}
 
 public extension StartCallRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

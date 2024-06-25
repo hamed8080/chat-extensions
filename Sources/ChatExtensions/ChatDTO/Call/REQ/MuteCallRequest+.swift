@@ -13,4 +13,5 @@ extension MuteCallRequest: ChatSendable, SubjectProtocol {}
 public extension MuteCallRequest {
     var subjectId: Int { callId }
     var content: String? { userIds.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

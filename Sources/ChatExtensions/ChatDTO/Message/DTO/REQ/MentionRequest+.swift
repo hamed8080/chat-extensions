@@ -13,4 +13,5 @@ extension MentionRequest: ChatSendable, SubjectProtocol {}
 public extension MentionRequest {
     var content: String? { jsonString }
     var subjectId: Int { threadId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

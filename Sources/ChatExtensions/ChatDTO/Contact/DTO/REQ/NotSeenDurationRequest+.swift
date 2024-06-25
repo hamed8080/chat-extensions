@@ -12,4 +12,5 @@ extension NotSeenDurationRequest: ChatSendable {}
 
 public extension NotSeenDurationRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

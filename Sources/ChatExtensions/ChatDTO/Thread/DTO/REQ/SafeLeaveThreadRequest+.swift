@@ -13,4 +13,5 @@ extension SafeLeaveThreadRequest: ChatSendable, SubjectProtocol {}
 public extension SafeLeaveThreadRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

@@ -14,6 +14,7 @@ extension ForwardMessageRequest: Queueable, PlainTextSendable, SubjectProtocol {
 public extension ForwardMessageRequest {
     var subjectId: Int { threadId }
     var content: String? { "\(messageIds)" }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 public extension ForwardMessageRequest {
@@ -21,7 +22,6 @@ public extension ForwardMessageRequest {
         .init(fromThreadId: fromThreadId,
               messageIds: messageIds,
               threadId: threadId,
-              typeCode: typeCode,
               uniqueIds: uniqueIds)
     }
 }

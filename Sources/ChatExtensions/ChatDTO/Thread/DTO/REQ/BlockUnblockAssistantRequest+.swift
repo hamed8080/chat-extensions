@@ -13,4 +13,5 @@ extension BlockUnblockAssistantRequest: ChatSendable {}
 
 public extension BlockUnblockAssistantRequest {
     var content: String? { assistants.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

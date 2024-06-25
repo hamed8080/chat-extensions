@@ -13,4 +13,5 @@ extension RolesRequest: ChatSendable, SubjectProtocol {}
 public extension RolesRequest {
     var content: String? { userRoles.jsonString }
     var subjectId: Int { threadId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

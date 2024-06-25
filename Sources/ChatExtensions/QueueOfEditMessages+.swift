@@ -15,7 +15,6 @@ public extension QueueOfEditMessages {
                  repliedTo: edit.repliedTo,
                  textMessage: edit.textMessage,
                  threadId: edit.threadId,
-                 typeCode: edit.typeCode,
                  uniqueId: edit.uniqueId)
     }
 }

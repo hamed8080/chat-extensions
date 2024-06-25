@@ -12,4 +12,5 @@ extension CreateCallThreadRequest: ChatSendable {}
 
 public extension CreateCallThreadRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

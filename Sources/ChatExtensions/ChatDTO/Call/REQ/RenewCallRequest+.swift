@@ -13,4 +13,5 @@ extension RenewCallRequest: ChatSendable, SubjectProtocol {}
 public extension RenewCallRequest {
     var subjectId: Int { callId }
     var content: String? { invitess.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

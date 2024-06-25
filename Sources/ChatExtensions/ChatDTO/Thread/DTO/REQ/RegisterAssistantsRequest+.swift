@@ -12,4 +12,5 @@ extension RegisterAssistantsRequest: ChatSendable {}
 
 public extension RegisterAssistantsRequest {
     var content: String? { assistants.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

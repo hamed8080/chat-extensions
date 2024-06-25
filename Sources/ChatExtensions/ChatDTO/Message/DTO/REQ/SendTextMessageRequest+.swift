@@ -15,8 +15,8 @@ public extension SendTextMessageRequest {
     var content: String? { textMessage }
     var subjectId: Int { threadId }
     var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: self.messageType.rawValue) }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
-
 
 public extension SendTextMessageRequest {
     var queueOfTextMessages: QueueOfTextMessages {
@@ -26,7 +26,6 @@ public extension SendTextMessageRequest {
               systemMetadata: systemMetadata,
               textMessage: textMessage,
               threadId: threadId,
-              typeCode: typeCode,
               uniqueId: uniqueId)
     }
 

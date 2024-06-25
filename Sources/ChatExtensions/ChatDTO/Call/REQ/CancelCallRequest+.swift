@@ -13,4 +13,5 @@ extension CancelCallRequest: ChatSendable, SubjectProtocol {}
 public extension CancelCallRequest {
     var subjectId: Int { call.id }
     var content: String? { call.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

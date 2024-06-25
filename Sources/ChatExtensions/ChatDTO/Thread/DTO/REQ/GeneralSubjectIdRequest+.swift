@@ -13,4 +13,5 @@ extension GeneralSubjectIdRequest: ChatSendable, SubjectProtocol {}
 public extension GeneralSubjectIdRequest {
     var subjectId: Int { _subjectId }
     var content: String? { nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

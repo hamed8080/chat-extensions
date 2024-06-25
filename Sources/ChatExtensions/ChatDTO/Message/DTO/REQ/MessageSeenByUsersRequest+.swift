@@ -12,4 +12,5 @@ extension MessageSeenByUsersRequest: ChatSendable {}
 
 public extension MessageSeenByUsersRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

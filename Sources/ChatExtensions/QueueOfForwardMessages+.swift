@@ -12,7 +12,6 @@ public extension QueueOfForwardMessages {
         self.init(fromThreadId: forward.fromThreadId,
                   messageIds: forward.messageIds,
                   threadId: forward.threadId,
-                  typeCode: forward.typeCode,
                   uniqueIds: forward.uniqueIds)
     }
 }

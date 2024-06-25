@@ -12,4 +12,5 @@ extension DeactiveAssistantRequest: ChatSendable {}
 
 public extension DeactiveAssistantRequest {
     var content: String? { assistants.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

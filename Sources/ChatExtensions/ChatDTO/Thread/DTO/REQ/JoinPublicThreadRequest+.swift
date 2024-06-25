@@ -12,4 +12,5 @@ extension JoinPublicThreadRequest: PlainTextSendable {}
 
 public extension JoinPublicThreadRequest {
     var content: String? { threadName }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

@@ -14,6 +14,7 @@ extension ContactsRequest: ChatSendable {}
 
 public extension ContactsRequest {    
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 public extension ContactsRequest {

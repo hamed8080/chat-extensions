@@ -13,4 +13,5 @@ extension RactionCountRequest: ChatSendable, SubjectProtocol {}
 public extension RactionCountRequest {
     var subjectId: Int { conversationId }
     var content: String? { "\(messageIds)" }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

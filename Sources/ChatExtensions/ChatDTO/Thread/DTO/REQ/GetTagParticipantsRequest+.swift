@@ -13,4 +13,5 @@ extension GetTagParticipantsRequest: ChatSendable, SubjectProtocol {}
 public extension GetTagParticipantsRequest {
     var subjectId: Int { id }
     var content: String? { nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

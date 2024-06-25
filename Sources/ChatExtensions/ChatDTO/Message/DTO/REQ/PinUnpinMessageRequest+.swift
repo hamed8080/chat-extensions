@@ -13,4 +13,5 @@ extension PinUnpinMessageRequest: ChatSendable, SubjectProtocol {}
 public extension PinUnpinMessageRequest {
     var subjectId: Int { messageId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

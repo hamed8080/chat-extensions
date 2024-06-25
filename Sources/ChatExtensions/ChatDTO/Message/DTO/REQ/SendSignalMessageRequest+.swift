@@ -13,4 +13,5 @@ extension SendSignalMessageRequest: ChatSendable, SubjectProtocol {}
 public extension SendSignalMessageRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

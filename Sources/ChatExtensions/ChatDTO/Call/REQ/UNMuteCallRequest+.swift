@@ -13,4 +13,5 @@ extension UNMuteCallRequest: ChatSendable, SubjectProtocol {}
 public extension UNMuteCallRequest {
     var subjectId: Int { callId }
     var content: String? { userIds.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

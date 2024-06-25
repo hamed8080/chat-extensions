@@ -13,4 +13,5 @@ extension DeleteTagRequest: ChatSendable, SubjectProtocol {}
 public extension DeleteTagRequest {
     var subjectId: Int { id }
     var content: String? { nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

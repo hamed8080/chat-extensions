@@ -16,4 +16,5 @@ public extension ReplyPrivatelyRequest {
     var content: String? { replyContent.jsonString }
     var subjectId: Int { replyContent.fromConversationId }
     var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: self.messageType.rawValue) ?? .unknown }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

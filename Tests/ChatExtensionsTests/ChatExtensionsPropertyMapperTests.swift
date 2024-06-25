@@ -479,7 +479,7 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.repliedTo, req.queueOfTextMessages.repliedTo, "The repliedTo of QueueOfEditMessage shouold be equal to repliedTo EditMessageRequest.")
         XCTAssertEqual(req.textMessage, req.queueOfTextMessages.textMessage, "The textMessage of QueueOfEditMessage shouold be equal to textMessage EditMessageRequest.")
         XCTAssertEqual(req.threadId, req.queueOfTextMessages.threadId, "The threadId of QueueOfEditMessage shouold be equal to threadId EditMessageRequest.")
-        XCTAssertEqual(req.typeCode, req.queueOfTextMessages.typeCode, "The typeCode of QueueOfEditMessage shouold be equal to typeCode EditMessageRequest.")
+        XCTAssertEqual(req.typeCodeIndex, 0, "The typeCode of QueueOfEditMessage shouold be equal to typeCode EditMessageRequest.")
         XCTAssertEqual(req.uniqueId, req.queueOfTextMessages.uniqueId, "The uniqueId of QueueOfEditMessage shouold be equal to uniqueId EditMessageRequest.")
         XCTAssertEqual(req._messageType?.rawValue, req.messageType.rawValue, "The _messageType of QueueOfEditMessage shouold be equal to _messageType EditMessageRequest.")
 
@@ -503,7 +503,7 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.repliedTo, textMessageRequest.repliedTo, "The repliedTo field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.textMessage, textMessageRequest.textMessage, "The textMessage field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.threadId, textMessageRequest.threadId, "The threadId field of the QueueOfFileMessages should be equal")
-        XCTAssertEqual(req.typeCode, textMessageRequest.typeCode, "The typeCode field of the QueueOfFileMessages should be equal")
+        XCTAssertEqual(req.typeCode, "0", "The typeCode field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.uniqueId, textMessageRequest.uniqueId, "The uniqueId field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.userGroupHash, imageRequest.userGroupHash, "The userGroupHash field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.imageToSend?.count, imageRequest.dataToSend?.count, "The dataToSend field of the QueueOfFileMessages should be equal")
@@ -530,7 +530,7 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.repliedTo, textMessageRequest.repliedTo, "The repliedTo field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.textMessage, textMessageRequest.textMessage, "The textMessage field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.threadId, textMessageRequest.threadId, "The threadId field of the QueueOfFileMessages should be equal")
-        XCTAssertEqual(req.typeCode, textMessageRequest.typeCode, "The typeCode field of the QueueOfFileMessages should be equal")
+        XCTAssertEqual(req.typeCode, "0", "The typeCode field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.uniqueId, textMessageRequest.uniqueId, "The uniqueId field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.userGroupHash, fileRequest.userGroupHash, "The userGroupHash field of the QueueOfFileMessages should be equal")
         XCTAssertEqual(req.fileToSend?.count, fileRequest.dataToSend?.count, "The fileToSend field of the QueueOfFileMessages should be equal")
@@ -538,12 +538,12 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
 
     func test_whenForwardMessageRequestToQueueOfForwardMessages_itHasSameFields() {
         var forwardRequest = ForwardMessageRequest(fromThreadId: 1, threadId: 1, messageIds: [1, 2, 3])
-        forwardRequest.typeCode = "TEST"
+        forwardRequest.typeCodeIndex = 0
         let req = QueueOfForwardMessages(forward: forwardRequest)
         XCTAssertEqual(req.fromThreadId, forwardRequest.fromThreadId, "The fromThreadId field of the QueueOfForwardMessages should be equal")
         XCTAssertEqual(req.messageIds, forwardRequest.messageIds, "The messageIds field of the QueueOfForwardMessages should be equal")
         XCTAssertEqual(req.threadId, forwardRequest.threadId, "The threadId field of the QueueOfForwardMessages should be equal")
-        XCTAssertEqual(req.typeCode, forwardRequest.typeCode, "The typeCode field of the QueueOfForwardMessages should be equal")
+        XCTAssertEqual(req.typeCode, "0", "The typeCode field of the QueueOfForwardMessages should be equal")
         XCTAssertEqual(req.uniqueIds, forwardRequest.uniqueIds, "The uniqueIds field of the QueueOfForwardMessages should be equal")
     }
 
@@ -552,13 +552,13 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.fromThreadId, req.queueOfForwardMessages.fromThreadId, "The fromThreadId field of the QueueOfForwardMessages should be equal to fromThreadId filed of ForwardMessageRequest.")
         XCTAssertEqual(req.messageIds, req.queueOfForwardMessages.messageIds, "The messageIds field of the QueueOfForwardMessages should be equal to messageIds filed of ForwardMessageRequest.")
         XCTAssertEqual(req.threadId, req.queueOfForwardMessages.threadId, "The threadId field of the QueueOfForwardMessages should be equal to threadId filed of ForwardMessageRequest.")
-        XCTAssertEqual(req.typeCode, req.queueOfForwardMessages.typeCode, "The typeCode field of the QueueOfForwardMessages should be equal to typeCode filed of ForwardMessageRequest.")
+        XCTAssertEqual(req.typeCodeIndex, 0, "The typeCode field of the QueueOfForwardMessages should be equal to typeCode filed of ForwardMessageRequest.")
         XCTAssertEqual(req.uniqueIds, req.queueOfForwardMessages.uniqueIds, "The uniqueIds field of the QueueOfForwardMessages should be equal to uniqueIds filed of ForwardMessageRequest.")
     }
 
     func test_whenSendTextMessageRequestToQueueOfTextMessages_itHasSameFields() {
         var textMessageRequest = SendTextMessageRequest(threadId: 1, textMessage: "TEST", messageType: .text)
-        textMessageRequest.typeCode = "TEST"
+        textMessageRequest.typeCodeIndex = 0
         let req = QueueOfTextMessages(textRequest: textMessageRequest)
         XCTAssertEqual(req.messageType, textMessageRequest.messageType, "The messageType field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.metadata, textMessageRequest.metadata, "The metadata field of the QueueOfTextMessages should be equal")
@@ -566,13 +566,13 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.systemMetadata, textMessageRequest.systemMetadata, "The systemMetadata field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.textMessage, textMessageRequest.textMessage, "The textMessage field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.threadId, textMessageRequest.threadId, "The threadId field of the QueueOfTextMessages should be equal")
-        XCTAssertEqual(req.typeCode, textMessageRequest.typeCode, "The typeCode field of the QueueOfTextMessages should be equal")
+        XCTAssertEqual(req.typeCode, "0", "The typeCode field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.uniqueId, textMessageRequest.uniqueId, "The uniqueId field of the QueueOfTextMessages should be equal")
     }
 
     func test_whenConvertSendTextMessageRequestToQueueOfTextMessages_itHasSameFields() {
         var textMessageRequest = SendTextMessageRequest(threadId: 1, textMessage: "TEST", messageType: .text)
-        textMessageRequest.typeCode = "TEST"
+        textMessageRequest.typeCodeIndex = 0
         let req = textMessageRequest.queueOfTextMessages
         XCTAssertEqual(req.messageType, textMessageRequest.messageType, "The messageType field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.metadata, textMessageRequest.metadata, "The metadata field of the QueueOfTextMessages should be equal")
@@ -580,7 +580,7 @@ final class ChatExtensionsPropertyMapperTests: XCTestCase {
         XCTAssertEqual(req.systemMetadata, textMessageRequest.systemMetadata, "The systemMetadata field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.textMessage, textMessageRequest.textMessage, "The textMessage field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.threadId, textMessageRequest.threadId, "The threadId field of the QueueOfTextMessages should be equal")
-        XCTAssertEqual(req.typeCode, textMessageRequest.typeCode, "The typeCode field of the QueueOfTextMessages should be equal")
+        XCTAssertEqual(req.typeCode, "0", "The typeCode field of the QueueOfTextMessages should be equal")
         XCTAssertEqual(req.uniqueId, textMessageRequest.uniqueId, "The uniqueId field of the QueueOfTextMessages should be equal")
     }
 

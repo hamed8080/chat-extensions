@@ -14,6 +14,7 @@ extension GetHistoryRequest: ChatSendable, SubjectProtocol {}
 public extension GetHistoryRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 public extension GetHistoryRequest {

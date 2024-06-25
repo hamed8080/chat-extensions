@@ -13,4 +13,5 @@ extension AddTagParticipantsRequest: ChatSendable, SubjectProtocol  {}
 public extension AddTagParticipantsRequest {
     var subjectId: Int { tagId }
     var content: String? { threadIds.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

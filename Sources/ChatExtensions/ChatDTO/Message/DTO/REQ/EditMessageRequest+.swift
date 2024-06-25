@@ -16,6 +16,7 @@ public extension EditMessageRequest {
     var content: String? { textMessage }
     var subjectId: Int { messageId }
     var _messageType: ChatCore.MessageType? { ChatCore.MessageType(rawValue: messageType.rawValue) }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
 
 public extension EditMessageRequest {
@@ -25,7 +26,6 @@ public extension EditMessageRequest {
               repliedTo: repliedTo,
               textMessage: textMessage,
               threadId: threadId,
-              typeCode: typeCode,
               uniqueId: uniqueId)
     }
 }

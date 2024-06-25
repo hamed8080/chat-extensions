@@ -13,4 +13,5 @@ extension UserReactionRequest: ChatSendable, SubjectProtocol {}
 public extension UserReactionRequest {
     var subjectId: Int { conversationId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

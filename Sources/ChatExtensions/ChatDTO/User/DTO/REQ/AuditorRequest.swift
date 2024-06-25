@@ -13,4 +13,5 @@ extension AuditorRequest: ChatSendable, SubjectProtocol {}
 public extension AuditorRequest {
     var content: String? { userRoles.jsonString }
     var subjectId: Int { threadId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

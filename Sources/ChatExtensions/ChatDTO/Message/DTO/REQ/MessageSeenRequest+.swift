@@ -12,4 +12,5 @@ extension MessageSeenRequest: PlainTextSendable {}
 
 public extension MessageSeenRequest {
     var content: String? { "\(messageId)" }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

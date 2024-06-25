@@ -12,4 +12,5 @@ extension UnBlockRequest: ChatSendable {}
 
 public extension UnBlockRequest {
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

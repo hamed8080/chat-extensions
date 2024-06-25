@@ -13,4 +13,5 @@ extension AdminRoleRequest: ChatSendable, SubjectProtocol {}
 public extension AdminRoleRequest {
     var subjectId: Int { conversationId }
     var content: String? { invitees.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

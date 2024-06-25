@@ -13,4 +13,5 @@ extension AddBotCommandRequest: ChatSendable {
 
 public extension AddBotCommandRequest {
     var content: String? { return nil }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

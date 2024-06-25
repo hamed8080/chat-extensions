@@ -13,4 +13,5 @@ extension ChangeThreadTypeRequest: ChatSendable, SubjectProtocol  {}
 public extension ChangeThreadTypeRequest {
     var subjectId: Int { threadId }
     var content: String? { jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

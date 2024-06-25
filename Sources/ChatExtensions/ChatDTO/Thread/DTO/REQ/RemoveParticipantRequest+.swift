@@ -13,4 +13,5 @@ extension RemoveParticipantRequest: ChatSendable, SubjectProtocol {}
 public extension RemoveParticipantRequest {
     var content: String? { participantIds?.jsonString ?? invitees?.jsonString }
     var subjectId: Int { threadId }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }

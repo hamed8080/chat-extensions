@@ -12,4 +12,5 @@ extension LastActionInConversationRequest: ChatSendable {}
 
 public extension LastActionInConversationRequest {
     var content: String? { ids.jsonString }
+    var chatTypeCodeIndex: Index { typeCodeIndex }
 }
