@@ -20,6 +20,8 @@ public extension DownloadManagerParameters {
                   thumbnail: request.thumbnail,
                   hashCode: request.hashCode,
                   isImage: true,
+                  conversationId: request.conversationId,
+                  typeCodeIndex: request.typeCodeIndex,
                   uniqueId: request.uniqueId)
     }
 
@@ -32,6 +34,8 @@ public extension DownloadManagerParameters {
                   thumbnail: false,
                   hashCode: request.hashCode,
                   isImage: false,
+                  conversationId: request.conversationId,
+                  typeCodeIndex: request.typeCodeIndex,
                   uniqueId: request.uniqueId)
     }
 }
