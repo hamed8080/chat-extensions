@@ -12,7 +12,14 @@ import ChatCore
 public extension DownloadManagerParameters {
 
     init(_ request: ImageRequest, _ config: ChatConfig, _ cache: CacheFileManagerProtocol?) {
-        let url = URL(string: "\(config.fileServer)\(Routes.images.rawValue)/\(request.hashCode)")!
+        var request = request
+        let url: URL
+        if request.thumbnail {
+            url = URL(string: "\(config.fileServer)\(Routes.thumbnail.rawValue.replacingOccurrences(of: "{hashCode}", with: request.hashCode))")!
+            request.quality = 1
+        } else {
+            url = URL(string: "\(config.fileServer)\(Routes.images.rawValue)/\(request.hashCode)")!
+        }
         self.init(forceToDownload: request.forceToDownloadFromServer || cache?.isFileExist(url: url) == false,
                   url: url,
                   token: config.token,
