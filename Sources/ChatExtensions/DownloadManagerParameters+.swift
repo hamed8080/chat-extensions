@@ -14,7 +14,7 @@ public extension DownloadManagerParameters {
     init(_ request: ImageRequest, _ config: ChatConfig, _ cache: CacheFileManagerProtocol?) {
         var request = request
         let url: URL
-        if request.thumbnail {
+        if request.thumbnail, request.withNewthumbnailAPI {
             url = URL(string: "\(config.fileServer)\(Routes.thumbnail.rawValue.replacingOccurrences(of: "{hashCode}", with: request.hashCode))")!
             request.quality = 1
         } else {
