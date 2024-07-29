@@ -17,7 +17,7 @@ let package = Package(
             targets: ["ChatExtensions"]),
     ],
     dependencies: [
-        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.1.0"),
+        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.1.1"),
         .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-cache", from: "2.1.0"),
         .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-core", from: "2.1.0"),
 //        .package(path: "../ChatTransceiver"),
