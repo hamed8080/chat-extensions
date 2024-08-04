@@ -1,5 +1,5 @@
 //
-// RactionCountRequest+.swift
+// ReactionListRequest+.swift
 // Copyright (c) 2022 ChatExtensions
 //
 // Created by Hamed Hosseini on 12/14/22
@@ -8,10 +8,10 @@ import ChatDTO
 import ChatCore
 import Foundation
 
-extension RactionCountRequest: ChatSendable, SubjectProtocol {}
+extension ReactionListRequest: ChatSendable, SubjectProtocol {}
 
-public extension RactionCountRequest {
+public extension ReactionListRequest {
     var subjectId: Int { conversationId }
-    var content: String? { "\(messageIds)" }
+    var content: String? { jsonString }
     var chatTypeCodeIndex: Index { typeCodeIndex }
 }

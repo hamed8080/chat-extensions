@@ -3,6 +3,22 @@
 
 import PackageDescription
 
+let useLocalDependency = true
+
+let local: [Package.Dependency] = [
+    .package(path: "../ChatTransceiver"),
+    .package(path: "../ChatCache"),
+    .package(path: "../ChatCore"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
+let remote: [Package.Dependency] = [
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.1.1"),
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-cache", from: "2.1.0"),
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-core", from: "2.1.0"),
+    .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+]
+
 let package = Package(
     name: "ChatExtensions",
     defaultLocalization: "en",
@@ -16,37 +32,23 @@ let package = Package(
             name: "ChatExtensions",
             targets: ["ChatExtensions"]),
     ],
-    dependencies: [
-//        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.1.1"),
-//        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-cache", from: "2.1.0"),
-//        .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-core", from: "2.1.0"),
-        .package(path: "../ChatTransceiver"),
-        .package(path: "../ChatCache"),
-        .package(path: "../ChatCore"),
-        .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
-    ],
+    dependencies: useLocalDependency ? local : remote,
     targets: [
         .target(
             name: "ChatExtensions",
             dependencies: [
-//                .product(name: "ChatTransceiver", package: "chat-transceiver"),
-//                .product(name: "ChatCache", package: "chat-cache"),
-//                .product(name: "ChatCore", package: "chat-core"),
-                .product(name: "ChatTransceiver", package: "ChatTransceiver"),
-                .product(name: "ChatCache", package: "ChatCache"),
-                .product(name: "ChatCore", package: "ChatCore"),
+                .product(name: "ChatTransceiver", package: useLocalDependency ? "ChatTransceiver" : "chat-transceiver"),
+                .product(name: "ChatCache", package: useLocalDependency ? "ChatCache" : "chat-cache"),
+                .product(name: "ChatCore", package: useLocalDependency ? "ChatCore" : "chat-core"),
             ]
         ),
         .testTarget(
             name: "ChatExtensionsTests",
             dependencies: [
                 "ChatExtensions",
-//                .product(name: "ChatTransceiver", package: "chat-transceiver"),
-//                .product(name: "ChatCache", package: "chat-cache"),
-//                .product(name: "ChatCore", package: "chat-core"),
-                .product(name: "ChatTransceiver", package: "ChatTransceiver"),
-                .product(name: "ChatCache", package: "ChatCache"),
-                .product(name: "ChatCore", package: "ChatCore"),
+                .product(name: "ChatTransceiver", package: useLocalDependency ? "ChatTransceiver" : "chat-transceiver"),
+                .product(name: "ChatCache", package:  useLocalDependency ? "ChatCache" : "chat-cache"),
+                .product(name: "ChatCore", package: useLocalDependency ? "ChatCore" : "chat-core"),
             ],
             resources: []
         ),
