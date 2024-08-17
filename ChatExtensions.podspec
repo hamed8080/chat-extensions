@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ChatExtensions"
-  s.version      = "2.1.0"
+  s.version      = "2.2.0"
   s.summary      = "ChatExtensions"
   s.description  = "A set of extensions to ease using of repetitive useful over methods, variables, enum, classes of Chat Models, Classes and etc."
   s.homepage     = "https://pubgi.sandpod.ir/chat/ios/chat-extensions"
