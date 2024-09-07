@@ -13,7 +13,7 @@ let local: [Package.Dependency] = [
 ]
 
 let remote: [Package.Dependency] = [
-    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.2.0"),
+    .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-transceiver", from: "2.2.1"),
     .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-cache", from: "2.2.0"),
     .package(url: "https://pubgi.sandpod.ir/chat/ios/chat-core", from: "2.2.0"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
